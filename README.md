@@ -153,3 +153,18 @@ Webpack is watching the files…
 ```
 
 After you can access `http://localhost:4000/`
+
+### Add a GraphQL library
+Delete the database once
+    docker rm hello-db -f
+
+Add [Absinthe](http://absinthe-graphql.org/) in `mix.exs`
+
+    mix deps.get
+
+At this point, create a database again
+
+    docker run --name hello-db -p 15432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -d postgres:9.6
+    
+    mix ecto.create
+

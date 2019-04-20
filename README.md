@@ -30,7 +30,7 @@ you are ready to go
 
 ## Install [Phoenix](https://phoenixframework.org/)
 ```
-mix archive.install hex phx_new 1.4.3
+$ mix archive.install hex phx_new 1.4.3
 
 Could not find Hex, which is needed to build dependency :phx_new
 Shall I install Hex? (if running non-interactively, use "mix local.hex --force") [Yn] Y
@@ -49,7 +49,7 @@ Are you sure you want to install "phx_new-1.4.3.ez"? [Yn] Y
 ```
 
 ```
-mix phx.new hello
+$ mix phx.new hello
 
 * creating hello/config/config.exs
 * creating hello/config/dev.exs

@@ -25,7 +25,12 @@ you are ready to go
 
     Elixir 1.8.1 (compiled with Erlang/OTP 21)
 
-## Install [Phoenix](https://phoenixframework.org/)
+## [Phoenix](https://phoenixframework.org/)
+### Requirements
+- node.js (>= 5.0.0)
+- PostgreSQL (default)
+
+### Install
 ```
 $ mix archive.install hex phx_new 1.4.3
 
@@ -128,5 +133,23 @@ docker run --name hello-db -p 15432:5432 -e POSTGRES_USER=postgres -e POSTGRES_P
 
 Create database
 ```
-mix ecto.create
+$ mix ecto.create
+
+Compiling 13 files (.ex)
+Generated hello app
+The database for Hello.Repo has been created
 ```
+
+Start the Phoenix server
+```
+$ mix phx.server
+
+[info] Running HelloWeb.Endpoint with cowboy 2.6.3 at 0.0.0.0:4000 (http)
+[info] Access HelloWeb.Endpoint at http://localhost:4000
+
+Webpack is watching the files…
+
+...
+```
+
+After you can access `http://localhost:4000/`

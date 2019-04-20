@@ -72,4 +72,5 @@ config :hello, Hello.Repo,
   password: "postgres",
   database: "hello_dev",
   hostname: "localhost",
+  port: 15432,
   pool_size: 10

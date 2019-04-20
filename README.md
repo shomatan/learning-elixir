@@ -12,14 +12,11 @@
     sudo apt-get install elixir
 
 ### Docker
-- Interactive mode
-
+#### Interactive mode
     docker run -it --rm elixir
 
-- Bash
-
+#### Bash
     docker run -it --rm elixir bash
-
 
 Finally, when the version information can output by executing the command `elixir --version`,
 you are ready to go
@@ -48,6 +45,7 @@ Are you sure you want to install "phx_new-1.4.3.ez"? [Yn] Y
 * creating /Users/shoma/.mix/archives/phx_new-1.4.3
 ```
 
+Create a new project
 ```
 $ mix phx.new hello
 
@@ -117,4 +115,18 @@ Start your Phoenix app with:
 You can also run your app inside IEx (Interactive Elixir) as:
 
     $ iex -S mix phx.server
+```
+
+```
+cd hello
+```
+
+Start postgres
+```
+docker run --name hello-db -p 15432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -d postgres:9.6
+```
+
+Create database
+```
+mix ecto.create
 ```

@@ -1,9 +1,10 @@
 version: '3.2'
 services:
-  web:
-    build: .
+  app:
+    container_name: phoenix-app
+    image: elixir-phoenix
     ports:
-      - '4000:4000'
+      - "4000:4000"
     command: mix phx.server
     environment:
       - MIX_ENV=dev
@@ -12,6 +13,7 @@ services:
       - .:/app:delegated
 
   db:
+    container_name: phoenix-db
     image: postgres
     environment:
       - POSTGRES_USER=postgres

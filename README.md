@@ -9,7 +9,10 @@
     make init
     make deps
     make migrate
-    cd assets && npm install
+    cd app/assets && npm install
+
+## Usage
+    make up
 
 ## Memo
 ### How to create a new project

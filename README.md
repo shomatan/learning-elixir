@@ -8,7 +8,9 @@
 ## Setup
     make init
     make deps
+    make migrate
+    cd assets && npm install
 
 ## Memo
 ### How to create a new project
-    docker-compose run web mix phx.new $(DESTINATION_DIR) --app $(APP_NAME)
+    docker-compose run web mix phx.new . --app $(APP_NAME)

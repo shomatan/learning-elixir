@@ -1,9 +1,8 @@
-# learning-elixir
+# learning-elixir-phoenix
 
 ## Requirements
 - Docker
 - node.js (>= 5.0.0)
-- PostgreSQL (default)
 
 ## Create a new project
     mkdir new_app

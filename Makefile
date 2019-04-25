@@ -27,6 +27,9 @@ migrate: ## Compile and migrate
 deps: ## Get all dependencies
 	docker-compose run web mix deps.get	
 
+gen-secret: ## Generate a salt
+	docker-compose run web mix phx.gen.secret 32		
+
 destroy: ## Destroy all services and delete volume
 	docker-compose down -v
 

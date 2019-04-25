@@ -10,6 +10,7 @@
     make deps
     make migrate
     cd app/assets && npm install
+    make gen-secret 
 
 ## Usage
     make up

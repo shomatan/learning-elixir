@@ -18,6 +18,9 @@ up: ## Start services
 stop: ## Stop services
 	docker-compose stop
 
+recreate: ## Force recreate services
+	docker-compose up -d --force-recreate
+
 migrate: ## Compile and migrate
 	docker-compose up -d db
 	make wait-db
